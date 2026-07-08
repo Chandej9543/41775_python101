@@ -85,6 +85,17 @@ print(type(None)) # <class 'NoneType'>
 print(None == None) # True (None is equal to None)
 print(None is None) # True (None is the same object as None)
 print(None is not None) # False (None is not the same object as None)
+x = None
+print(x) # None (x is assigned to None)
+
+------------------------------------------
+
+dict(key-value pair) example code :
+
+dict(key) #correct way to create a dictionary
+dict[key] = value # adding or updating a key-value pair
+dict.keys() # returns a view object of the keys in the dictionary
+dict.values() # returns a view object of the values in the dictionary
 
 type example code :
 
