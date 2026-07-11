@@ -1,0 +1,59 @@
+# -------------------------------------------
+"""
+don't foget name variable : 
+"Total" isn't "total" or "TOTAL" or "ToTal" or "tOtal" or "toTal" or "totAl" or "totaL"
+"Apple" isn't "apple" or "APPLE" or "aPple" or "apPle" or "appLe" or "applE"
+"Banana" isn't "banana" or "BANANA" or "bAnana" or "baNana" or "banAna" or "banaNa" or "bananA"
+"Orange" isn't "orange" or "ORANGE" or "oRange" or "orAnge" or "oraNge" or "oranGe" or "orangE"
+
+"""
+# -------------------------------------------
+
+# normal code
+
+print("today is Monday.")
+print("I like strings beans.")
+
+# =end code
+
+print("today is Monday.", end="")
+print("I like strings beans.")
+
+# space code
+
+print("today", "is", "Monday.")
+print("I", "like", "strings", "beans.")
+
+# -------------------------------------------
+
+# user input code
+
+name = input("What is your name? ")
+like = input("What do you like? ")
+
+# run code
+
+print("Hello", name,",", "You like", like,".")
+
+# -------------------------------------------
+
+data = {"apple", "banana", "orange", "grape", "kiwi" , "mango", "pear", "peach", "plum", "cherry" , "watermelon", "cantaloupe", "honeydew", "papaya", "pineapple", "coconut", "avocado", "fig", "date", "pomegranate"}
+
+print(f"fruits : {data}")
+
+# -------------------------------------------
+
+# add player and score
+
+player1 = "liverpool"
+player2 = "manchester united"
+score1 = 2
+score2 = 1
+
+# run code
+
+print(f"{player1} versus {player2} : score {score1} - {score2} , the winner is {player1}.")
+
+# -------------------------------------------
+
+# End :3

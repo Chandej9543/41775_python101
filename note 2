@@ -1,0 +1,248 @@
+# Data Types
+"""
+int - integer type
+Example: 1, 2, 3, -4 , 0 , 100 , 999 , -1000 , 345 , 34 , 56 , 78 , 90 , 12 , 34 , 56 , 78 , 90
+
+float - floating point type
+Example: 1.0 , 2.5 , 3.14 , -45.67 , 0.0 , 100.0 , 999.99 , -1000.01 , 345.67 , 34.56 , 56.78 , 90.12 , 12.34 , 56.78 , 90.12
+
+str - string type
+Example: "hello" , "world" , "python" , "programming" , "data" , "types" , "int" , "float" , "str" , "list" , "tuple" , "dict" , "set"
+
+str in window : // , / , /" 
+
+bool - boolean type 
+Example: True , False 
+
+double - double precision floating point type
+example: 1.0 , 2.5 , 3.14 , -45.67 , 0.0 , 100.0 , 999.99 , -1000.01 , 345.67 , 34.56 , 56.78 , 90.12 , 12.34 , 56.78 , 90.12
+
+----------------------------------------
+
+a = 7 
+b = 2
+
+print(a + b) # addition (7 + 2 = 9)
+print(a - b) # subtraction (7 - 2 = 5)
+print(a * b) # multiplication (7 * 2 = 14)
+print(a / b) # division (7 / 2 = 3.5)
+print(a // b) # floor division (7 // 2 = 3)
+print(a % b) # modulus (7 % 2 = 1)
+print(a ** b) # exponentiation (7 ** 2 = 49)
+
+print(10 % 2 == 0) # True (10 is even)
+print(10 % 2 != 0) # False (10 is not odd)
+print(10 % 3 == 0) # False (10 is not divisible by 3)
+print(10 % 3 != 0) # True (10 is not divisible by 3)
+print(10 % 5 == 0) # True (10 is divisible by 5)
+print(10 % 5 != 0) # False (10 is divisible by 5)
+
+pi = 3.14159
+
+-----------------------------------------
+
+int Example code :
+
+print(10 + 5) # addition (10 + 5 = 15)
+print(10 - 5) # subtraction (10 - 5 = 5)
+print(10 * 5) # multiplication (10 * 5 = 50)
+print(10 / 5) # division (10 / 5 = 2.0)
+print(10 // 5) # floor division (10 // 5 = 2)
+print(10 % 5) # modulus (10 % 5 = 0)
+print(10 ** 5) # exponentiation (10 ** 5 = 100000)
+
+------------------------------------------
+
+str Example code :
+
+print("Hello" + " " + "World") # concatenation (Hello World)
+print("Hello" * 3) # repetition (HelloHelloHello)
+print("Hello" , "World") # multiple arguments (Hello World)
+print("Hello" + str(5)) # concatenation with int (Hello5)
+print(f"Hello {5}") # f-string (Hello 5)
+
+------------------------------------------
+
+bool Example code :
+
+print(10 > 5) # True (10 is greater than 5)
+print(10 < 5) # False (10 is not less than 5)
+print(10 == 5) # False (10 is not equal to 5)
+print(10 != 5) # True (10 is not equal to 5)
+print(10 >= 5) # True (10 is greater than or equal to 5)
+print(10 <= 5) # False (10 is not less than or equal to 5)
+print(10 > 5 and 10 < 15) # True (10 is greater than 5 and less than 15)
+print(10 > 5 or 10 < 5) # True (10 is greater than 5 or less than 5)
+print(10 + 5 > 15) # False (10 + 5 is not greater than 15)
+print(10 + 5 < 15) # True (10 + 5 is less than 15)
+print(10 + 5 == 15) # True (10 + 5 is equal to 15)
+print(10 - 5 != 15) # True (10 - 5 is not equal to 15)
+
+none example code :
+
+print(None) # None (represents the absence of a value)
+print(type(None)) # <class 'NoneType'>
+print(None == None) # True (None is equal to None)
+print(None is None) # True (None is the same object as None)
+print(None is not None) # False (None is not the same object as None)
+x = None
+print(x) # None (x is assigned to None)
+
+------------------------------------------
+
+dict(key-value pair) example code :
+
+dict(key) #correct way to create a dictionary
+dict[key] = value # adding or updating a key-value pair
+dict.keys() # returns a view object of the keys in the dictionary
+dict.values() # returns a view object of the values in the dictionary
+
+type example code :
+
+print(type(10)) # <class 'int'>
+print(type(10.5)) # <class 'float'>
+print(type("Hello")) # <class 'str'>
+print(type(True)) # <class 'bool'>
+print(type(None)) # <class 'NoneType'>
+print(type([])) # <class 'list'>
+print(type(())) # <class 'tuple'>
+
+list vs tuple example code :
+
+list = [1, 2, 3, 4, 5]
+tuple = (1, 2, 3, 4, 5)
+
+print(list) # [1, 2, 3, 4, 5]
+print(tuple) # (1, 2, 3, 4, 5)
+
+print(list[0]) # 1 (first element of list)
+print(tuple[0]) # 1 (first element of tuple)
+
+list.append(6) # add 6 to the end of the list
+print(list) # [1, 2, 3, 4, 5, 6]
+tuple.append(6) # error (tuples are immutable)  
+print(tuple) # (1, 2, 3, 4, 5)
+
+list.insert(0, 0) # add 0 to the beginning of the list
+print(list) # [0, 1, 2, 3, 4, 5, 6]
+tuple.insert(0, 0) # error (tuples are immutable)
+print(tuple) # (1, 2, 3, 4, 5)
+
+list.remove(3) # remove 3 from the list
+print(list) # [0, 1, 2, 4, 5, 6]
+tuple.remove(3) # error (tuples are immutable)
+print(tuple) # (1, 2, 3, 4, 5)
+
+-------------------------------------------
+
+***function example code***
+
+A = 10
+B = 5
+
+def C():
+    return (A + B) # addition (10 + 5 = 15)
+
+print(C()) # 15
+
+D = 9
+E = 7
+
+def F(D, E):
+    return (D + E) # addition (9 + 7 = 16)
+
+print(F(A, B)) # 15
+print(F(B, E)) # 12
+print(F(D, E)) # 16
+
+"""
+
+# odd and even number example code :
+
+A = int(input("Enter a number: "))
+
+if A % 2 == 0:
+    print("The number is even.")
+else:
+    print("The number is odd.")
+
+#--------------------------------------------
+
+#circle area example code :
+
+B = float(input("Enter the radius of the circle: "))
+
+area = 3.14159 * (B ** 2)
+
+print(f"The area of the circle with radius {B} is {area}.")
+
+#--------------------------------------------
+
+#grade calculator example code :
+
+#minimal code
+
+"""
+score = int(input())
+if score >= 80:
+    print("A")
+elif score >= 70:
+    print("B")
+elif score >= 60:
+    print("C")
+elif score >= 50:
+    print("D")
+else:
+    print("F")
+
+
+
+
+"""
+
+
+
+
+"""
+A = 80-100
+B = 70-79
+C = 60-69
+D = 50-59
+F = 0-49
+"""
+print("Grade Calculator")
+print("--------------------------------------------")
+print("A = 80-100")
+print("B = 70-79")
+print("C = 60-69")
+print("D = 50-59")
+print("F = 0-49")
+print("--------------------------------------------")
+print("Enter your score (0-100): ")
+B = float(input("Score: "))
+
+
+if B >= 80 and B <= 100:
+    print("Your grade is A.")
+elif B >= 70 and B <= 79:
+    print("Your grade is B.")
+elif B >= 60 and B <= 69:
+    print("Your grade is C.")
+elif B >= 50 and B <= 59:
+    print("Your grade is D.")
+else:
+    print("Your grade is F.")
+
+print("--------------------------------------------")
+
+n = int(input("Enter the number of values: "))
+nums = [int(input("Enter a number: ")) for _ in range(n)]
+print(sum(nums), f"{sum(nums)/n:.1f}", max(nums), min(nums))
+
+print("--------------------------------------------")
+
+words = input("Enter a sentence: ").split()
+words.reverse()
+print(" ".join(words))
+
+print("--------------------------------------------")
