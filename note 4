@@ -1,0 +1,287 @@
+"""
+-------------------------------------------
+Error code note 
+-------------------------------------------
+1) open file error
+  File "demo.txt" , line 1, in <module>
+    open('foo.txt')
+  FileNotFoundError: [Errno 2] 
+  No such file or directory: 'foo.txt'
+ 
+2) syntax error
+    File "demo.txt" , line 1
+    print("Hello World"
+                        ^
+                        )   
+
+3) indentation error
+    File "demo.txt" , line 2 
+    print("Hello World")
+
+4) name error
+    File "demo.txt" , line 1
+    print(x)
+
+5) type error
+    File "demo.txt" , line 1
+    print(5 + "hello")
+
+6) value error
+    File "demo.txt" , line 1
+    int("hello")
+
+7) index error
+    File "demo.txt" , line 1
+    list = [1, 2, 3]
+    print(list[3])
+
+8) key error
+    File "demo.txt" , line 1
+    dict = {"a": 1, "b": 2}
+    print(dict["c"])
+
+9) attribute error
+    File "demo.txt" , line 1
+    list = [1, 2, 3]
+    list.append(4)
+    list.remove(5)
+
+10) import error
+    File "demo.txt" , line 1
+    import non_existent_module
+
+11) zero division error
+    File "demo.txt" , line 1
+    print(5 / 0)
+
+-------------------------------------------
+loop example code
+-------------------------------------------
+1) while loop example code :
+    while true:
+        print("Hello World")
+
+Hello World
+Hello World
+Hello World
+...
+
+2) for loop example code :
+    for i in range(5):
+        print(i)
+
+0
+1
+2
+3
+4
+
+3) nested loop example code :
+    for i in range(3):
+        for j in range(3):
+            print(i, j)
+
+0 0
+0 1
+0 2
+1 0
+1 1
+...
+2 2
+
+
+4) break statement example code :
+    for i in range(5):
+        if i == 3:
+            break
+        print(i)
+0
+1
+2
+
+5) continue statement example code :
+    for i in range(5):
+        if i == 3:
+            continue
+        print(i)
+0
+1
+2
+4
+
+6) pass statement example code :
+    for i in range(5):
+        if i == 3:
+            pass
+        print(i)
+
+0
+1
+2
+3
+
+7) infinite loop example code :
+    while 1+1==2: 
+        print("Hello World")
+
+Hello World
+Hello World
+Hello World
+...
+
+-------------------------------------------
+loop with list example code
+-------------------------------------------
+
+1) for loop with list example code
+
+list = ["apple", "banana", "cherry"]
+for i in list:
+    print("I like", i)
+
+I like apple
+I like banana
+I like cherry
+
+2) while loop with list example code
+
+list = ["apple", "banana", "cherry"]
+i = 0
+while i < len(list):
+    print("I like", list[i])
+    i += 1
+
+I like apple
+I like banana
+I like cherry
+
+3) for loop with list and break statement example code
+
+list = ["apple", "banana", "cherry"]
+for i in list:
+    if i == "banana":
+        break
+    print("I like", i)  
+
+I like apple
+
+4) for loop with list and continue statement example code
+
+list = ["apple", "banana", "cherry"]
+for i in list:
+    if i == "banana":
+        continue
+    print("I like", i)
+
+I like apple
+I like cherry
+
+5) for loop with list and pass statement example code
+
+list = ["apple", "banana", "cherry"]
+for i in list:  
+    if i == "banana":
+        pass
+    print("I like", i)
+
+I like apple
+I like banana
+I like cherry
+
+6) while loop with list and break statement example code
+
+list = ["apple", "banana", "cherry"]
+i = 0
+while i < len(list):
+    if list[i] == "banana":
+            break
+    print("I like", list[i])
+    i += 1
+
+I like apple
+
+7) while loop with list and continue statement example code
+
+list = ["apple", "banana", "cherry"]
+i = 0
+while i < len(list):
+    if list[i] == "banana":
+            i += 1
+            continue
+    print("I like", list[i])
+    i += 1
+
+I like apple
+I like cherry
+
+8) while loop with list and pass statement example code
+
+list = ["apple", "banana", "cherry"]
+i = 0
+while i < len(list):
+    if list[i] == "banana":
+            i += 1
+            pass
+    print("I like", list[i])
+    i += 1
+
+I like apple
+I like cherry
+
+"""
+
+i = int(input("Enter a starting number: "))
+n = int(input("Enter a ending number: "))
+
+while i <= n:
+    print(i)
+    i = i + 1
+
+print("-------------------------------------------")
+
+limit = int(input("Enter a limit: "))
+a = 1
+while a < limit:
+    print(a)
+    a = a * 2
+
+print("-------------------------------------------")
+
+total = 0
+while True:
+    x = int(input("enter 0 for ending :"))
+    if x == 0:
+        break
+    total = total + x
+print(total)
+
+print("-------------------------------------------")
+
+n = int(input("number : "))
+count = 0
+while n > 1:
+    n = n // 2
+    count = count + 1
+print(count)
+
+print("-------------------------------------------")
+
+n = int(input("n ="))
+a = int(input("a ="))
+b = int(input("b ="))
+for i in range(a, b):
+    print(n, "x", i, "=", n * i)
+
+print("-------------------------------------------")
+
+items = []
+while True:
+    entry = input()
+    if entry == "x":
+        break
+    items.append(entry)
+print("items :", len(items))
+if len(items) == 0:
+    print("empty")
+else:
+    print(", ".join(items))
