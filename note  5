@@ -1,0 +1,123 @@
+n = int(input("n: "))
+scores = []
+for i in range(n):
+    scores.append(int(input("add score: ")))
+scores.remove(min(scores))
+print("scores is", sum(scores))
+
+print("--------------------------------")
+
+n = int(input("n: "))
+inventory = {}
+for i in range(n):
+    parts = input("enter item name and quantity: ").split()
+    name = parts[0]
+    qty = int(parts[1])
+    if name in inventory:
+        inventory[name] = inventory[name] + qty
+    else:
+        inventory[name] = qty
+query = input("enter item to query: ")
+if query in inventory:
+    print(inventory[query])
+else:
+    print("not found")
+
+print("--------------------------------")
+
+def grade(score):
+    if score >= 80:
+        return "A"
+    elif score >= 70:
+        return "B"
+    elif score >= 60:
+        return "C"
+    else:
+        return "D"
+ 
+n = int(input("n: "))
+for i in range(n):
+    score = int(input("enter score: "))
+    print(score, ":", grade(score))
+
+print("--------------------------------")
+
+while True:
+    text = input("enter a number: ")
+    try:
+        value = int(text)
+        break
+    except:
+        print("try again")
+print("added :", value)
+
+print("--------------------------------")
+
+n = int(input("n: "))
+with open("history.txt", "a") as f:
+    for i in range(n):
+        line = input("enter a line: ")
+        f.write(line + "\n")
+
+with open("history.txt", "r") as f:
+    lines = [line.strip() for line in f if line.strip()]
+
+count = 0
+highest = 0
+for line in lines:
+    parts = line.split()
+    if len(parts) < 3:
+        continue
+    try:
+        score = int(line.split()[1])
+    except ValueError:
+        continue
+    count += 1
+    if score > highest:
+        highest = score
+
+print("records :", n)
+print("highest :", highest)
+
+print("--------------------------------")
+
+
+def update_score(scores, name, points):
+    if name not in scores or points > scores[name]:
+        scores[name] = points
+ 
+try:
+    with open("highscore.txt", "r") as f:
+        lines = f.readlines()
+    scores = {}
+    for line in lines:
+        parts = line.split()
+        scores[parts[0]] = int(parts[1])
+except FileNotFoundError:
+    scores = {}
+ 
+n = int(input("actions: "))
+for i in range(n):
+    cmd = input("enter command: ").split()
+    action = cmd[0]
+    name = cmd[1]
+    if action == "add":
+        try:
+            points = int(cmd[2])
+            update_score(scores, name, points)
+        except:
+            print("try again :", name)
+    else:
+        if name in scores:
+            print(scores[name])
+        else:
+            print("not found :", name)
+ 
+with open("highscore.txt", "w") as f:
+    for name in sorted(scores):
+        f.write(name + " " + str(scores[name]) + "\n")
+ 
+with open("highscore.txt", "r") as f:
+    saved_lines = f.readlines()
+print("successful save", len(saved_lines), "items  in highscore.txt")
+
